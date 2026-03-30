@@ -60,7 +60,7 @@ def render_tree(exploration: ExplorationTree, console: Console | None = None) ->
     footer = Text()
     footer.append(f"Churn index: {exploration.churn_index:.1f}", style="bold")
     footer.append(f" ({churn_label})", style="dim")
-    footer.append(f"  |  {n} hypothesis{'es' if n != 1 else ''}", style="dim")
+    footer.append(f"  |  {n} {'hypothesis' if n == 1 else 'hypotheses'}", style="dim")
     footer.append(f"  |  {tool_calls} tool call{'s' if tool_calls != 1 else ''}", style="dim")
 
     console.print()
